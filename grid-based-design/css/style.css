@@ -31,37 +31,37 @@ html {
     width: 956px;
     margin: 20px auto;
     border: 1px solid #000;
-    background-image: url("../img/grid.png");
+    /* background-image: url("../img/grid.png"); */
   }
   
   header.primary {
-    width: 916px;
-    margin: 20px;
+    width: 95.86%;
+    margin: 2.18%;
     background-color: rgba(0, 0, 0, 0.4);
     float: right;
-    padding: 20px;
+    padding: 2.09%;
   }
   
   #blog {
-    width: 682px;
+    width: 71.34%;
     background-color: rgba(0, 0, 0, 0.4);
     float: right;
-    margin-right: 20px;
-    padding: 20px;
+    margin-right: 2.09%;
+    padding: 2.09%;
   }
   
   aside {
-    width: 214px;
+    width: 22.38%;
     float: right;
     background-color: rgba(0, 0, 0, 0.4);
-    margin-right: 20px;
-    padding: 20px 20px 14px 20px;
+    margin-right: 2.09%;
+    padding: 2.09%;
   }
   footer.primary {
-    width: 916px;
-    margin: 20px;
+    width: 95.86%;
+    margin: 2.18%;
     background-color: rgba(0, 0, 0, 0.4);
     float: right;
-    padding: 20px;
+    padding: 2.09%;
   }
   
