@@ -1,29 +1,30 @@
-/*---------------Box Sizing---------------*/
-
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
-
-/*--------------Responsive Images------------*/
+.container{
+width:70vw;
+max-width:900px;
+margin:40px auto;
+}
 
 img{
-  max-width:100%;
-  height:auto;
+max-width:100%;
+height:auto;
 }
 
 /*-- --*/
 
 body{
-    background-color: #FFEAD1;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23C97233' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23D69369'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-    margin:0;
-    font-family: 'Inter', Arial, sans-serif;
+  background-color: #FFEAD1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='1000' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23C97233' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23D69369'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  margin:0;
+  font-family: 'Inter', Arial, sans-serif;
 }
 
 header.primary{
@@ -32,65 +33,99 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 text-align:center;
 color:#ffffff;
 text-shadow: 2px 2px #000000;
-/*Long Form*/
-padding-top:40px;
-padding-right:40px;
-padding-bottom:20px;
-padding-left:40px;
-/*T,R,B,L*/  
 padding:40px 40px 20px 40px;
-/*Top/Bottom  Right/Left*/
-padding: 20px 40px;
 }
 
 header.primary h1{
-  color:#A66273;
-  font-size:3.2rem; 
-  margin: 20px 0 50px;
+color:#A66273;
+font-size:3.2rem; 
+margin: 20px 0 50px;
 }
 
 header.primary h1 a{
-  display:block;
-  width:60vw;
-  margin:0 auto;
-  color:#ffffff;
-  text-decoration:none;
-      background:url("https://see.fontimg.com/api/renderfont4/x30zV/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjRUFEOENGIiwiYmdjIjoiI0ZGRkVGRSIsInQiOjF9/SGFubmFoIERhcmRlbg/queensides-medium.png");
-  text-indent:100%;
-  white-space:nowrap;
-  overflow:hidden;
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;
+display:block;
+width:60vw;
+margin:0 auto;
+color:#ffffff;
+text-decoration:none;
+background:url("https://see.fontimg.com/api/renderfont4/x30zV/eyJyIjoiZnMiLCJoIjo4NywidyI6MTAwMCwiZnMiOjg3LCJmZ2MiOiIjRUFEOENGIiwiYmdjIjoiI0ZGRkVGRSIsInQiOjF9/SGFubmFoIERhcmRlbg/queensides-medium.png");
+text-indent:100%;
+white-space:nowrap;
+overflow:hidden;
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
 }
 
 header.primary nav{
-  width:80vw;
-  margin:20px auto;
-  max-width:900px;
+width:80vw;
+margin:20px auto;
+max-width:900px;
 }
 
 header.primary nav ul{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  padding:0;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+padding:0;
 }
 
 header.primary nav ul li{
-  list-style-type:none;
+list-style-type:none;
 }
 
 header.primary nav a:link, header.primary nav a:visited{
-  color: #FFE4D7;
-  text-decoration:none;
-  background-color:#000000;
-  background-color:rgba(0,0,0,.4);
-  padding:8px 50px;
-  border-radius: 20px;
-  transition:.5s;
+color: #FFE4D7;
+text-decoration:none;
+background-color:#000000;
+background-color:rgba(0,0,0,.4);
+padding:8px 50px;
+border-radius: 20px;
+transition:.5s;
 }
 
 header.primary nav a:hover, header.primary nav a:active{
-  background-color:rgba(0,0,0,.8);
+background-color:rgba(0,0,0,.8);
+}
+
+
+
+@media screen and (max-width:600px){
+
+header.primary nav ul{
+  flex-direction:column;
+  justiy-content:space-between;
+}
+
+header.primary nav li{
+  padding:10px;
+}
+
+header.primary a{
+  display:block;
+}
+}
+
+@media screen and (min-width:600px){
+.row {
+  grid-template-columns:repeat(4,5fr);
+}
+  header.primary nav li{
+  background-color: #FED6C9;
+  border-radius: 10px;
+  padding: 5px;
+}
+  
+}
+
+@media screen and (max-width:599px){
+.row {
+  grid-template-columns:repeat(4,5fr);
+}
+  header.primary nav li{
+  background-color: #804f3e;
+  border-radius: 10px;
+  padding:5px;
+}
+  
 }
