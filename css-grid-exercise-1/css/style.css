@@ -1,72 +1,73 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  
-  /*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
-  /* Start of "Micro clearfix" */
-  
-  .cf {
-    zoom: 1;
-  }
-  .cf:before,
-  .cf:after {
-    content: "";
-    display: table;
-  }
-  .cf:after {
-    clear: both;
-  }
-  
-  /* End of "Micro clearfix" */
-  
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  
-  main {
-    width: 956px;
-    margin: 20px auto;
-    border: 1px solid #000;
-    background-image: url("../img/grid.png");
-    display:grid;
-    grid-template-columns:repeat(12,1fr);
-    gap:20px;
-    padding:0 20px;
-  }
-  
-  header.primary {
-    grid-column: 1 / span 12;
-    background-color: rgb(245, 173, 105);
-    padding: 20px;
-  }
-  
-  #content {
-    background-color: rgba(0, 0, 0, 0.4);
-    grid-column: 1/span 12;
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
-    padding:0;
-    grid-gap:20px;
-  }
+/*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Start of "Micro clearfix" */
 
-  #blog{
-    grid-column: 4/span 9;
-    background-color: rgb(142, 74, 182);
-    padding:20px;
-  }
-  
-  aside {
-    grid-column: 1/span 3;
-    background-color: rgb(141, 18, 179);
-    padding: 20px;
-  }
-  footer.primary {
-    grid-column: 1/span 12;
-    background-color: rgb(245, 173, 105);
-    padding: 20px;
-  }
-  
+.cf {
+  zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/* End of "Micro clearfix" */
+
+
+
+main {
+  width: 956px;
+  margin: 20px auto;
+  border: 1px solid #000;
+  /*background-image: url("../img/grid.png");*/
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:20px;
+  padding:0 20px;
+}
+
+header.primary {
+  grid-column: 1 / span 12;
+  background-color: rgb(245, 173, 105);
+  padding: 20px;
+}
+
+#content {
+  background-color: rgba(0, 0, 0, 0.4);
+  grid-column: 1/span 12;
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  padding:0;
+  grid-gap:20px;
+}
+
+#blog{
+  grid-column: 4/span 9;
+  background-color: rgb(142, 74, 182);
+  padding:20px;
+  grid-row:1;
+}
+
+aside {
+  grid-column: 1/span 3;
+  background-color: rgb(141, 18, 179);
+  padding: 20px;
+  grid-row:1;
+}
+footer.primary {
+  grid-column: 1/span 12;
+  background-color: rgb(245, 173, 105);
+  padding: 20px;
+}
