@@ -5,11 +5,12 @@
     <title>Resume</title>
     <meta name="description" content="Resume Information on Hannah Darden" />
     <meta name="author" content="Hannah Darden" />
-    <link rel="stylesheet" href="microdata-resume/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
   </head>
   
   <body>
-    <header>
+    
+    <header class="container">
       <!-- Main Navigation -->
       <nav class="primary">
       <a href="#about">About</a>
@@ -18,13 +19,13 @@
       <a href="#education">Education</a>
     </nav>
     </header>
-    <!-- Main -->
-  <main itemscope itemtype="http://schema.org/Person">
-    <h1>Hannah M. Darden</h1>
+     <!-- Main -->
+    <main itemscope itemtype="http://schema.org/Person" class="container">
+      <img itemprop="image" src="https://www.seinstitute.com/wp-content/uploads/2020/01/placeholder-female-300x300-1.jpg" alt="Hannah Darden">
+      <h1>Hannah M. Darden</h1>
+      <p itemprop="description" class="description">Web Design & Development major with a working knowledge of C++, HTML5, JavaScript, and CSS. Strong communication skills. Strong art and design skills. Experience in computer multitasking and problem solving.</p>
     <section id="about">
-      <h2>Personal details</h2>
-      <img itemprop="image" src="img/image.jpg" alt="Hannah Darden">
-      <p itemprop="description">Web Design & Development major with a working knowledge of C++, HTML5, JavaScript, and CSS. Strong communication skills. Strong art and design skills. Experience in computer multitasking and problem solving.</p>
+      <h2 class="hide">Personal Details</h2>
       <dl>
         <dt>Name&colon;</dt>
         <dd itemprop="name">
@@ -33,23 +34,23 @@
         <dt>Date of birth&colon;</dt>
         <dd itemprop="birthDate"><time datetime="1976-10-12">03/18/1997</time></dd>
         <dt>Nationality&colon;</dt>
-        <dd itemprop="nationality">American</dd>
+        <dd itemprop="nationality">United States</dd>
         <dt>Location&colon;</dt>
         <dd itemprop="homeLocation">Arkansas</dd>
         <dt>Telephone&colon;</dt>
         <dd>
-          <a itemprop="telephone" href="tel:555.555.5555">479.329.8640</a>
+          <a itemprop="telephone" href="tel:555.555.5555">555.555.5555</a>
         </dd>
         <dt>Email&colon;</dt>
         <dd>
-          <a itemprop="email" href="mailto:email@mail.com">hmdarden97@gmail.com</a>
+          <a itemprop="email" href="mailto:email@mail.com">email@gmail.com</a>
         </dd>
         <dt>Address&colon;</dt>
 
         <dd itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-          <span itemprop="streetAddress">701 Green Mountain Dr Apt 1614</span>
-          <span itemprop="addressLocality">Little Rock, AR</span>
-          <span itemprop="postalCode">72211</span>
+          <span itemprop="streetAddress">2801 South University</span>
+          <span itemprop="addressLocality">Little Rock</span>
+          <span itemprop="postalCode">72204</span>
           <span itemprop="addressCountry">USA</span>
         </dd>
 
@@ -57,14 +58,13 @@
       <ul class="related-links">
         <li><a itemprop="url" rel="me" href="https://github.com/hmdarden/ifsc-3342">github</a></li>
         <li><a itemprop="url" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
-        <li><a itemprop="url" href="img/resume.pdf" download>pdf resume</a></li>
+        <li><a itemprop="url" href="resume.pdf" download>pdf resume</a></li>
       </ul>
     </section>
     <section id="skills">
       <h2>Skills</h2>
       <ul>
         <li class="skill">HTML</li>
-        <li class="skill">PHP</li>
         <li class="skill">JavaScript</li>
         <li class="skill">CSS</li>
         <li class="skill">C++</li>
@@ -76,11 +76,11 @@
       <article class="job">
         <h3 itemprop="jobTitle">911 Dispatcher</h3>
         <div itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <span itemprop="name">Bryant Communication</span>
+          <span itemprop="name">Company Name 1</span>
           <span>August 2019 - Present</span>
-          <p itemprop="description">Answering 911 calls while monitoring 10+ computer screens, all while answering first responders on the radio</p>
+          <p itemprop="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
           <span itemprop="location" itemscope itemtype="http://schema.org/Place">
-          <a itemprop="url" href="https://www.cityofbryant.com/">City of Bryant</a>
+          <a itemprop="url" href="https://www.cityofbryant.com/">Company URL</a>
           <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
           <span itemprop="addressLocality">Arkansas,USA</span>
           </span>
@@ -91,15 +91,15 @@
       <article class="job" itemscope itemtype="http://schema.org/Organization">
         <h3 itemprop="name">Pharmacy Technician/Manager</h3>
           <span itemprop="location" itemscope itemtype="http://schema.org/Place">
-          <span itemprop="name">Walgreens</span>
-          <a itemprop="url" href="https://www.walgreens.com/">Walgreens</a>
+          <span itemprop="name">Company Name 2</span>
+          <a itemprop="url" href="https://www.walgreens.com/">Company URL</a>
           <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <span itemprop="addressLocality">Arkansas,USA</span>
           </span>
           </span>
           <span itemprop="startDate" content="2018-10-18T20:00">October 2018</span>
           <span itemprop="endDate" content="2019-08-04T20:00">August 2019</span>
-        <p itemprop="description">Managing multiple software entry systems while also working with the public. Managed a team of employees throughout a shift.</p>
+        <p itemprop="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
       </article>
       <article class="job" itemscope itemtype="http://schema.org/Organization">
         <h3 itemprop="name">Third Employment</h3>
@@ -126,11 +126,9 @@
     </section>
   </main>
   <!-- Footer -->
-  <footer>
-    <div id="copyright">
-      &copy; company. All rights reserved.
-    </div>
-  </footer>
+  <footer id="colophon" role="contentinfo">
+      <h6> &copy; 2023 Hannah Darden | <a href="#top">Back to Top</a></h6>
+    </footer>
   </body>
   
 </html>

@@ -1,13 +1,177 @@
 html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  width:50%;
+  height:auto;
+  float:left;
+  margin-top:1px;
+  padding: 20px;
+}
+
+.container{
+  margin:0 auto;
+  /*Below Color-- #ffd7a6*/
+  background:rgba(255,215,166,100);
+  width:500px;
+  line-height:1.13em;
+  color:black;
+}
+
+nav{
   
-  img {
-    max-width:100%;
-    height:auto;
-  }
+  display:flex;
+  justify-content:space-between;
+  list-style:none;
+  padding-top:20px;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+nav a{
+  padding:8px 16px;
+  text-align:center;
+  text-decoration:none;
+  font-size:.75em;
+  background-color:rgba(0,0,0,.4);
+  transition: .5s;
+  border-radius: 10px;
+}
+
+nav a:hover, nav a:active{
+  background-color:rgba(0,0,0,.8);
+}
+
+main{
+  padding-top: 1px;
+}
+
+h1{
+  font-size:1.5em;
+  padding-top:3%;
+}
+
+.hide{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+body{
+  font-family: 'Lucida Console', Monospace;
+}
+
+header a:link, header a:visited{
+  color:#fff;
+}
+
+a:link, a:visited{
+  color:black;
+}
+
+#about{
+  border-top: 4px double black;
+  padding:10px;
+  line-height:2em;
+}
+
+dl{
+  display: grid;
+  grid-template-rows:auto;
+  grid-template-columns:8em 1fr;
+}
+
+dt{
+  font-weight:100;
+  grid-column: 1;
+  padding: 10px;
+}
+dd{
+  margin:0;
+  grid-column: 2;
+  padding: 10px 40px;
+}
+
+.related-links{
+  display:flex;
+  justify-content:space-between;
+  list-style:none;
+  padding-left:30px;
+  padding-right:30px;
+}
+
+.related-links a{
+  padding:8px 16px;
+  text-align:center;
+  text-decoration:none;
+  color: #fff;
+  font-size:.75em;
+  background-color:rgba(0,0,0,.4);
+  transition: .5s;
+  border-radius: 10px;
+}
+
+.related-links a:hover, .related-links a:active{
+  background-color:rgba(0,0,0,.8);
+}
+
+#skills{
+  border: 4px double black;
+  margin:10px;
+  padding:10px;
+}
+
+#skills li {
+  list-style-type:none;
+}
+
+#experience{
+  padding:10px;
+}
+
+.job *[itemprop="jobTitle"], 
+.job *[itemprop="name"], 
+.job *[itemprop="url"], 
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"]
+{
+  display:block;
+}
+
+.job h3{
+  margin-top:30px;
+}
+
+.job{
+  border-bottom:1px solid black;
+  padding-bottom:20px;
+}
+
+#education{
+  padding:10px;
+}
+
+#colophon h6 {
+  padding: 20px;
+  margin: 0;
+  color: black;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#colophon h6 a:link,
+#colophon h6 a:visited {
+  color: black;
+}
