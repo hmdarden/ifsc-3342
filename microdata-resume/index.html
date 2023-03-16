@@ -21,12 +21,14 @@
     </header>
      <!-- Main -->
     <main itemscope itemtype="http://schema.org/Person" class="container">
-      <img itemprop="image" src="../microdata-resume/img/resume-photo.jpg" alt="Hannah Darden">
-      <h1>Hannah M. Darden</h1>
-      <p itemprop="description" class="description">Web Design & Development major with a working knowledge of C++, HTML5, JavaScript, and CSS. Strong communication skills. Strong art and design skills. Experience in computer multitasking and problem solving.</p>
     <section id="about">
       <h2 class="hide">Personal Details</h2>
-      <dl>
+      <div class="intro">
+      <img itemprop="image" src="../microdata-resume/img/resume-photo.jpg" alt="Hannah Darden">
+      <h1 class="page-title">Hannah M. Darden</h1>
+      <p itemprop="description" class="description">Web Design & Development major with a working knowledge of C++, HTML5, JavaScript, and CSS. Strong communication skills. Strong art and design skills. Experience in computer multitasking and problem solving.</p>
+      </div>
+      <dl class="details">
         <dt>Name&colon;</dt>
         <dd itemprop="name">
           <span itemprop="givenName">Hannah</span> <span itemprop="familyName">Darden</span>
@@ -58,7 +60,7 @@
       <ul class="related-links">
         <li><a itemprop="url" rel="me" href="https://github.com/hmdarden/ifsc-3342">github</a></li>
         <li><a itemprop="url" rel="me" href="http://linkedin.com/profile">linkedin</a></li>
-        <li><a itemprop="url" href="../microdata-resume/img/resume.pdf" download>pdf resume</a></li>
+        <li><a itemprop="url" href="resume.pdf" download>pdf resume</a></li>
       </ul>
     </section>
     <section id="skills">
@@ -118,15 +120,14 @@
     <section id="education">
       <h2>Education</h2>
       <article class="certificate" itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-        <h3 itemprop="description"><abbr title="Bachelor of Arts">BA</abbr>Web Design and Development</h3>
+        <h3 itemprop="description"><abbr title="Bachelor of Arts">BA</abbr> Web Design and Development</h3>
           <span itemprop="name">UALR</span>
           <span itemprop="location" itemscope>Little Rock, USA</span>
           <span>2021-present</span>
       </article>
     </section>
   </main>
-  <!-- Footer -->
-  <footer id="colophon" role="contentinfo">
+    <footer id="colophon" role="contentinfo">
       <h6> &copy; 2023 Hannah Darden | <a href="#top">Back to Top</a></h6>
     </footer>
   </body>

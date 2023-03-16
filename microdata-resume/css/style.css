@@ -7,31 +7,47 @@ html {
   box-sizing: inherit;
 }
 
+/*---------------Images------------------*/
+
 img {
-  width:50%;
-  height:auto;
-  float:left;
-  margin-top:1px;
-  padding: 20px;
+  max-width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* ------------ Utility Classes  ------------*/
 
 .container{
   margin:0 auto;
-  /*Below Color-- #ffd7a6*/
-  background:rgba(255,215,166,100);
-  width:500px;
+  /*Below Color-- #FDE8D6*/
+  background:rgba(253,232,214,99);
   line-height:1.13em;
   color:black;
 }
 
-nav{
-  
+/*-------------Hidden Elements---------------*/
+
+.hide{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+/*-----------------Body Section Styles------------------*/
+
+nav{ 
   display:flex;
   justify-content:space-between;
   list-style:none;
-  padding-top:20px;
-  padding-left:30px;
-  padding-right:30px;
+  padding:20px 30px 20px 30px;
+  border-bottom: 4px double black;
 }
 
 nav a{
@@ -49,24 +65,7 @@ nav a:hover, nav a:active{
 }
 
 main{
-  padding-top: 1px;
-}
-
-h1{
-  font-size:1.5em;
-  padding-top:3%;
-}
-
-.hide{
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    white-space: nowrap;
+  padding-top: 1px 20px;
 }
 
 body{
@@ -82,18 +81,32 @@ a:link, a:visited{
 }
 
 #about{
-  border-top: 4px double black;
   padding:10px;
   line-height:2em;
 }
 
+.intro{
+  padding:20px;
+}
+
+.intro h1{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  font-size:1.5em;
+  padding-top:1.5%;
+}
+
 dl{
+  border-top: 4px double black;
   display: grid;
   grid-template-rows:auto;
   grid-template-columns:8em 1fr;
 }
 
 dt{
+  width:200px;
   font-weight:100;
   grid-column: 1;
   padding: 10px;
@@ -175,3 +188,95 @@ dd{
 #colophon h6 a:visited {
   color: black;
 }
+
+/*----------- Reordering Source Using Grid ----------*/
+
+main.container{
+  display:grid;
+  grid-template-areas:
+    "title"
+    "intro"
+    "about"
+    "skills"
+    "experience"
+    "education";
+}
+
+.page-title{
+  grid-area: title;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
+}
+
+/*--------------------Media Queries---------------------------*/
+
+@media screen and (min-width:600px){
+  
+  main.container{
+  max-width:750px; 
+  grid-template-columns: 36.5% auto;
+  grid-template-areas:
+    "title title"
+    "about about"
+    "skills education"
+    "experience experience";
+  }
+  
+  header.container{
+    max-width:750px;
+  }
+  
+  #skills{
+    border:none;
+   /* display:flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center; */
+  }
+  
+}
+
+@media screen and (min-width:750px){
+  
+  main.container{
+  max-width:992px; 
+  grid-template-columns: 36.5% auto;
+  grid-template-areas:
+    "title title"
+    "about about"
+    "skills education"
+    "experience experience";
+  }
+  
+  header.container{
+    max-width:992px;
+  }
+  
+  #skills{
+    border:none;
+   /* display:flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center; */
+  }
+  
+}
+
+
+/*-------------------Question Section-------------------------*/
+
+ /* I want to put skills in its own section, need to find out why the header isn't going to the top; also find out while skills header isn't at the same height as education */
+
+/* When the view is in mobile view, I  want the image to be left aligned with my name and bio info to the right hand side, but keep the border separating the bio info from the details info. How would I accomplish that? */
+
+/* Why does border at the top go to the end of the page, but the others have margins? */
