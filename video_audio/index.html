@@ -1,0 +1,53 @@
+<head>
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+    <link href="../video_audio/assets/css/style.css" rel="stylesheet">
+  
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+  </head>
+  
+  <body>
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      preload="auto"
+      width="640"
+      height="264"
+      poster="MY_VIDEO_POSTER.jpg"
+      data-setup="{}" >
+      <source src="../video_audio/assets/img/marvel.mp4" type="video/mp4" />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+
+    <video
+      id="my-video"
+      class="video-js"
+      controls
+      preload="auto"
+      width="640"
+      height="264"
+      poster="MY_VIDEO_POSTER.jpg"
+      data-setup="{}" >
+      <source src="../video_audio/assets/img/marvel-video.mp4" type="video/mp4" />
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+
+    <audio controls="controls">
+        <source src="../video_audio/assets/img/marvel-audio.mp3" type="audio/mp3" /><!-- Safari, Chrome, IE9+ -->
+        <a href="marvel-audio.mp3">Download the Audio</a>
+        </audio>
+
+   <p>The first video is both audio and video combined. The second is video only. The third is audio only. I used <a href="https://videojs.com/getting-started/">videojs.com</a></p>
+  
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  </body>
