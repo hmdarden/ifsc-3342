@@ -25,13 +25,13 @@ a {
 
 body{
     font-family: 'Poppins', sans-serif; 
+    background-color: #000;
     color:#fff;
     margin:0;
 }
 
 main{
     background-color: black;
-    
     margin:0 auto;
     display:grid;
     /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfAAAAK8AQMAAAAqEH8vAAAABlBMVEXj9PUHX2PVbKcXAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAL5JREFUeJztyzENhAAABLAjDIxIQArSQBpSkMDI8OEw8AZIurdpn2Rpj4ztnWxtMrdnhvaXrO2eqb2Sf1TXdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3Xv9ZfqpCWlDTW4ZkAAAAASUVORK5CYII=");*/
@@ -558,7 +558,6 @@ aside h1{
 
 
 @media screen and (min-width:1080px){
-
 /*---------------  Header Styles (1080px) -----------------*/
 
 .main-nav a{
@@ -600,7 +599,7 @@ aside h1{
 }
 
 .img-slide {
-  width:70%;
+  width:60%;
   float:center;
   height:auto;
   }
@@ -659,5 +658,14 @@ aside h2{
   margin-bottom:1px;
 }
 
+
+}
+
+
+@media screen and (min-width:1200px){
+
+main{
+  margin:0 100px 0 100px;
+} 
 
 }
