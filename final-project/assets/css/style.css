@@ -440,7 +440,7 @@ video{
 
 .main-nav a:hover, .main-nav a:active{
   background-color:#000;
-  padding:2px 30px 24px 30px;
+  padding:2px 30px 2px 30px;
   border-radius:3px;
   transition:.3s;
 }
@@ -550,7 +550,7 @@ aside h1{
   }
   
   .main-nav a:hover, .main-nav a:active{
-    padding:12px 55px 12px 55px;
+    padding:2px 55px 2px 55px;
   }
   
 }
