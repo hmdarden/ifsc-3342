@@ -1,0 +1,663 @@
+html{
+    box-sizing: border-box; 
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/*--------------------  Image and Utility Styles ---------------------*/
+
+img{
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: #fff;
+}
+
+/*--------------------  Global Styles ---------------------*/
+
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    color:#fff;
+    margin:0;
+}
+
+main{
+    background-color: black;
+    
+    margin:0 auto;
+    display:grid;
+    /*background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfAAAAK8AQMAAAAqEH8vAAAABlBMVEXj9PUHX2PVbKcXAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAL5JREFUeJztyzENhAAABLAjDIxIQArSQBpSkMDI8OEw8AZIurdpn2Rpj4ztnWxtMrdnhvaXrO2eqb2Sf1TXdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3XdV3Xv9ZfqpCWlDTW4ZkAAAAASUVORK5CYII=");*/
+    }
+
+/*--------------------  Header Styles ---------------------*/
+
+
+header.header{
+    background-image: url("../img/background-img1.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    display: grid;
+    padding-bottom: 20px;
+}
+
+/*------------------------ Header Nav -------------------------*/
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 20px 0 20px 0;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 28px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.main-nav {
+    grid-row: 1;
+    grid-column: 1/ span 12;
+    border-radius:3px;
+    overflow: hidden;
+    line-height: 2rem;
+    margin:0 20px 0 20px; 
+    z-index: 3;
+}
+
+.main-nav a:hover, .main-nav a:active{
+    background-color:#000;
+    padding:8px 50px 8px 10px;
+    border-radius:3px;
+    transition:.3s;
+}
+
+.main-nav ul {
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+.main-nav ul a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*-------------------- Hero in Header ---------------------*/
+
+.header h1{
+    font-family: 'Noticia Text', serif;
+    grid-column: 1/ span 12;
+    text-align:center;
+    margin:40px 1px 1px 1px;
+}
+
+.header h2{
+    font-family: 'Poppins', sans-serif;
+    grid-column: 1/ span 12;
+    text-align:center;
+    font-size: 1rem;
+    margin:10px 1px 1px 1px;
+}
+
+.header p{
+    font-family: 'Poppins', sans-serif;
+    grid-column: 1/ span 12;
+    text-align:justify;
+    padding-bottom: 20px;
+    font-size: .8rem;
+}
+ 
+.img-slide {
+    display: grid;
+    grid-column: 1 / span 12;
+    position: relative;
+    margin: auto;
+    clear: left;
+    max-width: 100%;
+    }
+
+.img-slide img{
+    width:100%;
+    }
+        
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    }
+        
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    background: #a3bcc5;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+        
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+        
+/* On hover, add a background color */
+    .prev:hover, .next:hover {
+    background-color: rgba(8,23,41,16);
+    }
+        
+.active, .dot:hover {
+    background-color: #163f70;
+    }
+        
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+/*--------------------  Counting Numbers Styles ---------------------*/
+
+  #num-animation{
+    background: linear-gradient(90deg,#47636d,#c2d8e0);
+    color: #fff;
+    font-family: 'Noticia Text', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 0;
+    padding: 30px;
+    font-size: .7rem;
+  }
+
+  #num-animation span{
+    font-family: 'Poppins', serif;
+  }
+  
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .counter {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+/*--------------------  Article Styles ---------------------*/
+
+#articles h1{
+    font-family: 'Noticia Text', serif;
+    display: grid;
+    text-align:center;
+    padding:0;
+    font-size: 2.5rem;
+}
+
+#articles .container{
+    position:relative;
+    justify-content:center;
+    display: grid;
+  }
+  
+section#articles h2 {
+    color: #fff;
+  }
+  
+#articles article.post{
+    font-family: 'Poppins', sans-serif;
+    max-width:100%;
+    box-shadow:0 4px 8px rgba(0,0,0,.4);
+    padding: 10px 10px 25px 10px;
+    margin: 0 0 60px 0;
+    border-radius:2px;
+    font-size:.9rem;
+    transition:.5s;
+    background: linear-gradient(90deg,#47636d,#648591);
+    justify-content:left;
+    text-align:center;
+  }
+  
+#articles article.post:hover{
+    box-shadow: 0 8px 16px rgba(0,0,0,.4);
+  }
+  
+#articles .post figure{
+    margin:8px;
+  }
+  
+#articles article time, #articles article figcaption, #articles article footer{
+    font-size:.8em;
+    text-transform:uppercase;
+    color:#fff;
+    
+  }
+  
+#articles article img{
+    border-radius:3px;
+    width: 250px;
+    height: 300px;
+  }
+  
+#articles article a:link, #articles article a:visited{
+    color: #181e61;
+  }
+  
+#articles article a:hover, #articles article a:active{
+    text-decoration: none;
+  }
+  
+/*--------------------  Aside Styles ---------------------*/
+
+aside{
+    display:grid;
+  }
+
+aside h1{
+    font-family:'Noticia Text', serif;
+    margin:0px;
+}
+
+aside h1{
+    text-align:center;
+    font-size: 2.5rem;
+  }
+
+aside h2{
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+    font-size: 1.2rem;
+  }
+
+aside ul{
+    display: grid;
+    background: linear-gradient(-10deg,#47636d,#c2d8e0);
+    margin:40px;
+    padding: 20px 10px 20px 10px;
+    font-size: 1.5rem;
+    border-radius:2px;
+  }
+
+aside li{
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;
+    font-size: 1rem;
+  }
+
+aside a{
+    display: grid;
+  }
+
+/*-------------------- Video Styles ---------------------*/
+
+.trailer-vid{
+  display:inline;
+  float:center;
+  text-align:center;
+  font-family:'Noticia Text', serif;
+  font-size: 1.5rem;
+}
+
+video{
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*-------------------- Social Media Styles ---------------------*/
+
+.social-media{
+  
+  position:relative;
+  float:right;
+  text-align:center;
+  margin:0 auto;
+  padding:40px 0 10px 0;
+}
+
+.social-media li{
+  display:inline;
+  padding:20px;
+
+}
+
+/*-------------------- Footer Styles ---------------------*/
+
+   #top-link{
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+   }
+/*-------------------- Media Queries ---------------------*/
+
+@media screen and (min-width:650px){
+
+/*---------------  Header Styles (650px) -----------------*/
+
+.header li {
+  float: left;
+}
+.header .menu {
+  clear: none;
+  float: right;
+  max-height: none;
+}
+.header .menu-icon {
+  display: none;
+}
+
+.main-nav{
+  display:inline;
+  grid-row: 1;
+  grid-column: 1/ span 12;
+  background-color: transparent;
+  }
+
+.main-nav a{
+  font-size:.7rem;
+  float:right;
+  margin: 10px;
+  background-color:#c2d8e0;
+  padding: 0 25px 0 25px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px #2f4b4e;
+  font-size:.7rem;
+  }
+
+.main-nav a:hover, .main-nav a:active{
+  background-color:#000;
+  padding:2px 30px 24px 30px;
+  border-radius:3px;
+  transition:.3s;
+}
+
+.header h1{
+  display:grid;
+  grid-column: 2/ span 5;
+  text-align:left;
+  font-size:2rem;
+}
+
+.header h2{
+  display:grid;
+  grid-column: 2/ span 5;
+  text-align:left;
+  font-size:1.2rem;
+}
+
+.header p{
+  display:grid;
+  grid-column: 2/ span 11;
+  text-align:left;
+  font-size:.9rem;
+}
+
+.img-slide {
+  width:100%;
+}
+
+.img-slide img{
+  width:100%;
+}
+
+#num-animation{
+  font-size:1.5rem;
+}
+
+/*----------------------- Article Section (650px) ------------------------*/
+
+#content{
+  display:grid;
+  
+}
+
+#articles{
+  grid-template-columns: repeat(12,1fr);
+  margin:15px;
+}
+
+#articles .container{
+  display:grid;
+  grid-column: 1/span 3;
+}
+
+#articles h1{
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+
+#articles img{
+  max-width:350px;
+}
+
+/*----------------------- Aside (650px) ------------------------*/
+
+aside {
+  display:grid;
+  grid-column: 4/span 9;
+}
+
+aside h1{
+  margin-block-end:auto;
+  margin-top:50px;
+  margin-bottom:1px;
+}
+
+aside h2{
+  margin-block-end:auto;
+  margin-top:1px;
+  margin-bottom:1px;
+}
+
+.img-slide {
+  width:70%;
+  float:center;
+  height:auto;
+  }
+
+}
+
+@media screen and (min-width:738px){
+
+/*----------------------- Article Section (738px) ------------------------*/
+
+aside h1{
+  margin-top: 80px;
+  margin-bottom: 62px;
+}
+
+}
+
+@media screen and (min-width:960px){
+
+  .main-nav a{
+    padding:0 45px 0 45px;
+    font-size:1rem;
+  }
+  
+  .main-nav a:hover, .main-nav a:active{
+    padding:12px 55px 12px 55px;
+  }
+  
+}
+
+
+
+@media screen and (min-width:1080px){
+
+/*---------------  Header Styles (1080px) -----------------*/
+
+.main-nav a{
+  padding:0 50px 0 50px;
+  font-size:1rem;
+}
+
+.main-nav a:hover, .main-nav a:active{
+  padding:2px 55px 2px 55px;
+}
+
+.hero h1{
+  font-family: 'Noticia Text', serif;
+  width:50%;
+  float:left;
+  text-align:left;
+  padding: 50px 0 0 20px;
+  margin:1px;
+  font-size:2.5rem;
+}
+
+.hero h2{
+  font-family: 'Poppins', sans-serif;
+  width:50%;
+  float:left;
+  text-align:left;
+  padding: 20px 0 10px 20px;
+  font-size: 1.5rem;
+  margin:1px;
+}
+
+.hero p{
+  font-family: 'Poppins', sans-serif;
+  float:left;
+  text-align:justify;
+  padding: 20px;
+  font-size: 1.2rem;
+  margin:1px;
+}
+
+.img-slide {
+  width:70%;
+  float:center;
+  height:auto;
+  }
+
+#num-animation{
+  font-size:1.8rem;
+  padding:50px;
+  }
+
+/*----------------------- Article Section (1080px) ------------------------*/
+
+#content{
+  display:grid;
+  
+}
+
+#articles{
+  grid-template-columns: repeat(12,1fr);
+  margin:15px;
+}
+
+#articles .container{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+}
+
+#articles h1{
+  margin-top: 65px;
+  margin-bottom: 65px;
+}
+
+#articles img{
+  max-width:350px;
+}
+
+#articles article.post{
+  margin: 20px;
+}
+
+/*----------------------- Aside (1080px) ------------------------*/
+
+aside {
+  display:grid;
+  grid-column: 10/span 12;
+}
+
+aside h1{
+  margin-block-end:auto;
+  margin-top:80px;
+  margin-bottom:80px;
+}
+
+aside h2{
+  margin-block-end:auto;
+  margin-top:1px;
+  margin-bottom:1px;
+}
+
+
+}

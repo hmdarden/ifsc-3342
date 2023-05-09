@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My final Mobile Web Development Project." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@videojs/themes@1/dist/fantasy/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../final-project/assets/css/style.css" />
+    <title>Mobile Web Development Final Project; Hannah Darden</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/w.png">
+</head>
+
+<body>
+    
+    <main itemscope itemtype="https://schema.org/Thing">
+
+        <header class="header">
+            
+            <nav id="main-nav" class="main-nav">
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                <ul class="menu">
+                  <li><a href="#top">Home</a></li>
+                  <li><a href="#num-animation">Awards</a></li>
+                  <li><a href="#articles">News</a></li>
+                  <li><a href="#books">Books</a></li>
+                  <li><a href="#trailer">Season 3</a></li>
+                </ul>
+            </nav>
+            <section class="hero">
+            <div class="hero-left">
+            <h1>Witcher v Witcher</h1>
+            <h2>Who Will You Choose</h2>
+            <p>New game or show updates here. Most of us know the story of The Witcher (at least The Wild Hunt). Some of us may have even read the books. We've compared which is better for the past couple of years and seemingly exhausted all points. But we're not done yet. Reload your save game and login to Netflix, because we have a new iteration of The Witcher to pick apart.</p>
+            </div>
+            <section class="img-slide">
+
+                
+
+                <!-- Full-width images with number and caption text -->
+                <article class="mySlides fade">
+                  <img src="assets/img/witcher-slide1-sm.jpg" alt="Image Holder">
+                </article>
+              
+                <article class="mySlides fade">
+                  <img src="assets/img/witcher-slide2-sm.jpg" alt="Image Holder">
+                </article>
+              
+                <article class="mySlides fade">
+                  <img src="assets/img/witcher-slide3-sm.jpg" alt="Image Holder">
+                </article>
+
+                <article class="mySlides fade">
+                    <img src="assets/img/witcher-slide4-sm.jpg" alt="Image Holder">
+                  </article>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </section>
+            </section>
+        
+
+        </header>
+
+        <section id="num-animation">
+            <div class="counter-container">
+                  <div class="counter" data-target="7"></div>
+                  <span>Games</span>
+                </div>
+                <div class="counter-container">
+                  <div class="counter" data-target="1000"></div>
+                  <span>Average Awards Garnered</span>
+                </div>
+                <div class="counter-container">
+                  <div class="counter" data-target="50"></div>
+                  <span>Million Copies Sold</span>
+                </div>
+        </section>
+
+        <section id="content">
+           <section id="articles">
+            <h1>What's New</h1>
+            <div class="container">
+            
+            <article class="post" id="post1">
+                <header>
+                    <figure>
+                        <img src="assets/img/news1.jpg"/>
+                        <figcaption>Image Caption</figcaption>
+                    </figure>
+                </header>
+                <p>New game or show updates here.</p>
+            </article>
+            <article class="post">
+                <header>
+                    <figure>
+                        <img src="assets/img/news2.jpg"/>
+                        <figcaption>Image Caption</figcaption>
+                    </figure>
+                </header>
+                <p>New game or show updates here.</p>
+            </article>
+            <article class="post">
+                <header>
+                    <figure>
+                        <img src="assets/img/news3.jpg"/>
+                        <figcaption>Image Caption</figcaption>
+                    </figure>
+                </header>
+                <p>New game or show updates here.</p>
+            </article>
+            <article class="post" id="post1">
+                <header>
+                    <figure>
+                        <img src="assets/img/news4.jpg"/>
+                        <figcaption>Image Caption</figcaption>
+                    </figure>
+                </header>
+                <p>New game or show updates here.</p>
+            </article>
+            </section> 
+            </div>
+           <aside id="books">
+            <div class="container">
+            <h1>Want more Witcher?</h1>
+            <ul>
+                <h2>Check out the Books: </h2>
+                <li><a href="https://witcher.fandom.com/wiki/Sword_of_Destiny">Sword of Destiny - 1992</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/The_Last_Wish">The Last Wish - 1993</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/Blood_of_Elves">Blood of Elves - 1994</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/Time_of_Contempt">Time of Contempt - 1995</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/Baptism_of_Fire">Baptism of Fire - 1996</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/The_Tower_of_the_Swallow">The Tower of the Swallow - 1997</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/The_Lady_of_the_Lake">The Lady of the Lake - 1999</a></li>
+                <li><a href="https://witcher.fandom.com/wiki/Season_of_Storms">Season of Storms - 2013</a></li>
+            </ul>
+            </div>
+           </aside>
+        </section>
+
+        <div class="trailer-vid" id="trailer">
+            <h1>Get Ready for Season 3</h1>
+            <video poster="assets/img/witcher-poster.jpg" controls="">
+                <source src="assets/img/trailer-vid.mp4" type="video/mp4"></source>
+              </video>
+        </div>
+
+         <div class="feedback-form">
+            <script type="text/javascript" src="https://form.jotform.com/jsform/231281665058155"></script>
+         </div>
+
+        <section class="social-media">
+                <li><a itemprop="url" href="https://www.facebook.com/witchernetflix/"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                <li><a itemprop="url" href="https://twitter.com/witchernetflix?lang=en"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+                <li><a itemprop="url" href="https://www.instagram.com/witchernetflix/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+        </section>
+
+        <footer id="top-link" role="contentinfo">
+            <a href="#top">Back to Top</a></h6>
+         </footer>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/536a3f9267.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+    <script src="https://kit.fontawesome.com/ccb178c4a6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
